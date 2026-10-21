@@ -78,7 +78,9 @@ small{display:block;color:#5b6974;margin-top:8px}
 </section>
 <section id="order" class="panel">
   <h2>آرڈر فارم</h2>
-  <form id="orderForm">
+  <form id="orderForm"
+action="https://formspree.io/f/xaeqrpkq"
+method="POST">
     <label for="customer">آپ کا نام</label><input id="customer" required placeholder="اپنا نام لکھیں">
     <label for="product">ورک شیٹ</label>
     <select id="product" required>
@@ -120,12 +122,15 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
 `Ilm Dost Learning Store — نیا آرڈر\nنام: ${name}\nورک شیٹ: ${product[0]}\nقیمت: Rs. ${product[1]}\nرابطہ: ${contact}\nنوٹ: ${notes || 'کوئی نہیں'}\nبراہ کرم JazzCash ادائیگی کی تصدیق کے لیے ہدایات بھیج دیں۔`;
   document.getElementById('result').hidden = false;
 });
-function copyOrder() {
-  const box = document.getElementById('orderText');
-  box.select(); box.setSelectionRange(0, 99999);
-  try { document.execCommand('copy'); alert('اگر کاپی نہ ہو تو پیغام کو منتخب کرکے Copy کریں۔'); }
-  catch(e) { alert('پیغام منتخب کرکے Copy کریں۔'); }
-}
+document.getElementById('customer').name = 'customer_name';
+document.getElementById('product').name = 'worksheet';
+document.getElementById('contact').name = 'customer_contact';
+document.getElementById('notes').name = 'notes';
+
+document.getElementById('orderForm').addEventListener('submit', function() {
+  const product = document.getElementById('product').value.split('|');
+  document.getElementById('product').value = product[0] + ' — Rs. ' + product[1];
+});
 </script>
 </body>
 </html>

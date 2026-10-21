@@ -93,13 +93,15 @@ action="https://formspree.io/f/xaeqrpkq"
 method="POST">
     <label for="customer">آپ کا نام</label><input id="customer" name="customer_name" type="text" required placeholder="اپنا نام لکھیں">
     <label for="product">ورک شیٹ</label>
-    <select id="product" required>
+    <select id="product" name="worksheet" required>
       <option value="Class 5 Science|100">Class 5 Science — Rs. 100</option>
       <option value="Class 6 English|100">Class 6 English — Rs. 100</option>
       <option value="Class 7 General Knowledge|100">Class 7 General Knowledge — Rs. 100</option>
     </select>
-    <label for="contact">WhatsApp نمبر یا ای میل</label><input id="contact" required placeholder="رابطے کی تفصیل">
-    <label for="notes">اضافی نوٹ (اختیاری)</label><textarea id="notes" rows="3" placeholder="مثلاً کلاس/باب"></textarea>
+    <label for="contact">WhatsApp نمبر یا ای میل</label>
+<input id="contact" name="customer_contact" required placeholder="رابطے کی تفصیل">
+    <label for="notes">اضافی نوٹ (اختیاری)</label>
+<textarea id="notes" name="notes" rows="3" placeholder="مثلاً کلاس/باب"></textarea>
 <label for="transaction">JazzCash Transaction ID</label>
 <input
   id="transaction"
@@ -108,7 +110,7 @@ method="POST">
   placeholder="ادائیگی کی Transaction ID لکھیں"
   required
 >
-    <button type="submit">آرڈر کی تفصیل تیار کریں</button>
+    <button type="submit">آرڈر بھیجیں</button>
     <small>یہ فارم آپ کے فون پر آرڈر کا پیغام تیار کرتا ہے؛ خود بخود کسی کو نہیں بھیجتا۔</small>
   </form>
   <div id="result" hidden class="notice" style="margin-top:14px">

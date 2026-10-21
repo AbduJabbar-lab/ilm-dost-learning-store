@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b5d">
+<title>Ilm Dost Learning Store</title>
+<style>
+:root{--navy:#123b5d;--blue:#176b87;--gold:#f3bd4f;--paper:#f5f8fb;--ink:#182633}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Nastaliq Urdu",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+header{background:linear-gradient(130deg,var(--navy),var(--blue));color:#fff;padding:26px 16px 34px;text-align:center}
+.brand{font-size:28px;font-weight:800;margin:0}.tag{margin:6px 0 0;color:#e8f4fb}
+nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;background:#0d2e48;padding:10px}
+nav a{color:white;text-decoration:none;font-size:14px}
+main{max-width:900px;margin:auto;padding:18px 14px}
+.hero,.panel,.product{background:white;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 5px 18px #18344d0d}
+.hero h2{margin-top:0;color:var(--navy)}.pill{display:inline-block;background:#fff0c9;color:#664800;padding:4px 10px;border-radius:999px;font-size:13px}
+h2,h3{color:var(--navy)}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.product h3{margin:6px 0}.price{font-weight:bold;color:#12613a;font-size:20px}.muted{color:#5b6974;font-size:14px}
+button,.button{border:0;border-radius:10px;background:var(--navy);color:white;padding:12px 15px;font-size:15px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+button:hover,.button:hover{background:var(--blue)}label{display:block;font-weight:bold;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #c8d4df;border-radius:9px;font-size:16px;background:#fff}
+.notice{background:#fff8e7;border-right:4px solid var(--gold);padding:12px;border-radius:8px}
+footer{text-align:center;background:#e8eff5;padding:22px 12px;font-size:13px}
+small{display:block;color:#5b6974;margin-top:8px}
+@media(max-width:480px){.brand{font-size:24px}main{padding:12px}.hero,.panel,.product{padding:15px}}
+</style>
+</head>
+<body>
+<header>
+  <p class="pill">تعلیم • مشق • کامیابی</p>
+  <h1 class="brand">Ilm Dost Learning Store</h1>
+  <p class="tag">طلبہ کے لیے آسان اور مفید تعلیمی ورک شیٹس</p>
+</header>
+<nav><a href="#home">ہوم</a><a href="#worksheets">ورک شیٹس</a><a href="#order">آرڈر کریں</a><a href="#payment">ادائیگی</a><a href="#contact">رابطہ</a></nav>
+<main>
+<section id="home" class="hero">
+  <h2>خوش آمدید!</h2>
+  <p>اپنی کلاس اور مضمون کے مطابق پریکٹس ورک شیٹس حاصل کریں۔ ہر پروڈکٹ کی تفصیل اور قیمت دیکھ کر آرڈر بھیجیں۔</p>
+  <p class="notice"><strong>اہم:</strong> فی الحال آرڈر دستی طریقے سے مکمل ہوں گے۔ ادائیگی اپنے JazzCash اکاؤنٹ میں خود چیک کرنے کے بعد ہی PDF بھیجی جائے گی۔</p>
+</section>
+<section id="worksheets">
+  <h2>دستیاب ورک شیٹس</h2>
+  <div class="products">
+    <article class="product">
+      <p class="pill">جلد دستیاب</p>
+      <h3>Class 5 Science</h3>
+      <p>باب، MCQs اور Answer Key کی تفصیل یہاں شامل کریں۔</p>
+      <p class="price">قیمت: Rs. 100</p>
+      <button onclick="chooseProduct('Class 5 Science','100')">آرڈر کریں</button>
+    </article>
+    <article class="product">
+      <p class="pill">جلد دستیاب</p>
+      <h3>Class 6 English</h3>
+      <p>گرامر، الفاظ اور پریکٹس سوالات کی تفصیل یہاں شامل کریں۔</p>
+      <p class="price">قیمت: Rs. 100</p>
+      <button onclick="chooseProduct('Class 6 English','100')">آرڈر کریں</button>
+    </article>
+    <article class="product">
+      <p class="pill">جلد دستیاب</p>
+      <h3>Class 7 General Knowledge</h3>
+      <p>عمومی معلومات اور مشق کے سوالات کی تفصیل یہاں شامل کریں۔</p>
+      <p class="price">قیمت: Rs. 100</p>
+      <button onclick="chooseProduct('Class 7 General Knowledge','100')">آرڈر کریں</button>
+    </article>
+  </div>
+  <small>یہ ابتدائی نمونہ کی فہرست ہے۔ جب تک اصل PDF تیار نہ ہو، ان پروڈکٹس کو فروخت کے لیے دستیاب نہ ظاہر کریں۔</small>
+</section>
+<section id="payment" class="panel">
+  <h2>JazzCash ادائیگی</h2>
+  <ol>
+    <li>آرڈر بھیجنے کے بعد دکاندار سے ادائیگی کی تفصیل حاصل کریں۔</li>
+    <li>صرف تصدیق شدہ JazzCash اکاؤنٹ/کاروباری نمبر پر رقم بھیجیں۔</li>
+    <li>آرڈر نمبر اور ادائیگی کی اطلاع بھیجیں۔</li>
+    <li>فروخت کنندہ اپنے اکاؤنٹ میں رقم موصول ہونے کی تصدیق کرے گا۔</li>
+    <li>تصدیق کے بعد PDF WhatsApp یا ای میل سے بھیجی جائے گی۔</li>
+  </ol>
+  <p class="notice">اس ویب سائٹ میں JazzCash کا خودکار payment gateway موجود نہیں ہے۔ اسکرین شاٹ یا رسید کو اکیلے ادائیگی کا ثبوت نہ سمجھیں۔</p>
+</section>
+<section id="order" class="panel">
+  <h2>آرڈر فارم</h2>
+  <form id="orderForm">
+    <label for="customer">آپ کا نام</label><input id="customer" required placeholder="اپنا نام لکھیں">
+    <label for="product">ورک شیٹ</label>
+    <select id="product" required>
+      <option value="Class 5 Science|100">Class 5 Science — Rs. 100</option>
+      <option value="Class 6 English|100">Class 6 English — Rs. 100</option>
+      <option value="Class 7 General Knowledge|100">Class 7 General Knowledge — Rs. 100</option>
+    </select>
+    <label for="contact">WhatsApp نمبر یا ای میل</label><input id="contact" required placeholder="رابطے کی تفصیل">
+    <label for="notes">اضافی نوٹ (اختیاری)</label><textarea id="notes" rows="3" placeholder="مثلاً کلاس/باب"></textarea>
+    <button type="submit">آرڈر کی تفصیل تیار کریں</button>
+    <small>یہ فارم آپ کے فون پر آرڈر کا پیغام تیار کرتا ہے؛ خود بخود کسی کو نہیں بھیجتا۔</small>
+  </form>
+  <div id="result" hidden class="notice" style="margin-top:14px">
+    <p>آرڈر کا پیغام تیار ہے۔ اسے کاپی کرکے دکاندار کو بھیجیں:</p><textarea id="orderText" rows="8" readonly></textarea><button type="button" onclick="copyOrder()">پیغام کاپی کریں</button>
+  </div>
+</section>
+<section id="contact" class="panel">
+  <h2>رابطہ</h2>
+  <p>WhatsApp: اپنا رابطہ نمبر یہاں شامل کریں</p>
+  <p>ادائیگی کی تفصیل صرف براہ راست تصدیق کے بعد شیئر کریں۔</p>
+</section>
+</main>
+<footer>© Ilm Dost Learning Store • تعلیمی مواد کے لیے</footer>
+<script>
+function chooseProduct(name, price) {
+  const sel = document.getElementById('product');
+  for (const option of sel.options) {
+    if (option.value.startsWith(name + '|')) { sel.value = option.value; break; }
+  }
+  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+}
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('customer').value.trim();
+  const product = document.getElementById('product').value.split('|');
+  const contact = document.getElementById('contact').value.trim();
+  const notes = document.getElementById('notes').value.trim();
+  document.getElementById('orderText').value =
+`Ilm Dost Learning Store — نیا آرڈر\nنام: ${name}\nورک شیٹ: ${product[0]}\nقیمت: Rs. ${product[1]}\nرابطہ: ${contact}\nنوٹ: ${notes || 'کوئی نہیں'}\nبراہ کرم JazzCash ادائیگی کی تصدیق کے لیے ہدایات بھیج دیں۔`;
+  document.getElementById('result').hidden = false;
+});
+function copyOrder() {
+  const box = document.getElementById('orderText');
+  box.select(); box.setSelectionRange(0, 99999);
+  try { document.execCommand('copy'); alert('اگر کاپی نہ ہو تو پیغام کو منتخب کرکے Copy کریں۔'); }
+  catch(e) { alert('پیغام منتخب کرکے Copy کریں۔'); }
+}
+</script>
+</body>
+</html>

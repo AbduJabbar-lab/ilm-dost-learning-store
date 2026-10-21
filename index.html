@@ -124,13 +124,92 @@ method="POST">
 </section>
 </main>
 <footer>© Ilm Dost Learning Store • تعلیمی مواد کے لیے</footer>
+
 <script>
 function chooseProduct(name, price) {
   const sel = document.getElementById('product');
+
   for (const option of sel.options) {
-    if (option.value.startsWith(name + '|')) { sel.value = option.value; break; }
-  }  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+    if (option.value.startsWith(name + '|')) {
+      sel.value = option.value;
+      break;
+    }
+  }
+
+  document.getElementById('order').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+const orderForm = document.getElementById('orderForm');
+
+orderForm.addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const customer = document.getElementById('customer').value.trim();
+  const productValue = document.getElementById('product').value;
+  const productParts = productValue.split('|');
+  const product = productParts[0];
+  const price = productParts[1] || '0';
+  const contact = document.getElementById('contact').value.trim();
+  const notes = document.getElementById('notes').value.trim();
+  const transaction = document.getElementById('transaction').value.trim();
+
+  const message =
+    'Ilm Dost Learning Store - Order\n\n' +
+    'Customer Name: ' + customer + '\n' +
+    'Worksheet: ' + product + '\n' +
+    'Price: Rs. ' + price + '\n' +
+    'Contact: ' + contact + '\n' +
+    'JazzCash Transaction ID: ' + transaction + '\n' +
+    'Notes: ' + (notes || 'None') + '\n\n' +
+    'Payment will be verified before the PDF is provided.';
+
+  const result = document.getElementById('result');
+  const orderText = document.getElementById('orderText');
+
+  orderText.value = message;
+  result.hidden = false;
+
+  const button = orderForm.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.textContent = 'آرڈر بھیجا جا رہا ہے...';
+
+  try {
+    const response = await fetch(orderForm.action, {
+      method: 'POST',
+      body: new FormData(orderForm),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      alert('آرڈر کی تفصیل موصول ہو گئی ہے۔ اب پیغام کاپی کر سکتے ہیں۔');
+    } else {
+      alert('آرڈر خودکار طور پر نہیں بھیجا گیا۔ پیغام کاپی کرکے محفوظ رکھیں۔');
+    }
+  } catch (error) {
+    alert('انٹرنیٹ یا بھیجنے میں مسئلہ ہے۔ پیغام کاپی کرکے محفوظ رکھیں۔');
+  } finally {
+    button.disabled = false;
+    button.textContent = 'آرڈر بھیجیں';
+  }
+});
+
+async function copyOrder() {
+  const orderText = document.getElementById('orderText');
+
+  try {
+    await navigator.clipboard.writeText(orderText.value);
+    alert('آرڈر کا پیغام کاپی ہو گیا ہے۔');
+  } catch (error) {
+    orderText.focus();
+    orderText.select();
+    alert('پیغام منتخب ہے۔ Copy دبائیں۔');
+  }
 }
 </script>
+
 </body>
 </html>

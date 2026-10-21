@@ -81,7 +81,7 @@ small{display:block;color:#5b6974;margin-top:8px}
   <form id="orderForm"
 action="https://formspree.io/f/xaeqrpkq"
 method="POST">
-    <label for="customer">آپ کا نام</label><input id="customer" required placeholder="اپنا نام لکھیں">
+    <label for="customer">آپ کا نام</label><input id="customer" name="customer_name" type="text" required placeholder="اپنا نام لکھیں">
     <label for="product">ورک شیٹ</label>
     <select id="product" required>
       <option value="Class 5 Science|100">Class 5 Science — Rs. 100</option>
@@ -109,28 +109,8 @@ function chooseProduct(name, price) {
   const sel = document.getElementById('product');
   for (const option of sel.options) {
     if (option.value.startsWith(name + '|')) { sel.value = option.value; break; }
-  }
-  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+  }  document.getElementById('order').scrollIntoView({behavior:'smooth'});
 }
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('customer').value.trim();
-  const product = document.getElementById('product').value.split('|');
-  const contact = document.getElementById('contact').value.trim();
-  const notes = document.getElementById('notes').value.trim();
-  document.getElementById('orderText').value =
-`Ilm Dost Learning Store — نیا آرڈر\nنام: ${name}\nورک شیٹ: ${product[0]}\nقیمت: Rs. ${product[1]}\nرابطہ: ${contact}\nنوٹ: ${notes || 'کوئی نہیں'}\nبراہ کرم JazzCash ادائیگی کی تصدیق کے لیے ہدایات بھیج دیں۔`;
-  document.getElementById('result').hidden = false;
-});
-document.getElementById('customer').name = 'customer_name';
-document.getElementById('product').name = 'worksheet';
-document.getElementById('contact').name = 'customer_contact';
-document.getElementById('notes').name = 'notes';
-
-document.getElementById('orderForm').addEventListener('submit', function() {
-  const product = document.getElementById('product').value.split('|');
-  document.getElementById('product').value = product[0] + ' — Rs. ' + product[1];
-});
 </script>
 </body>
 </html>

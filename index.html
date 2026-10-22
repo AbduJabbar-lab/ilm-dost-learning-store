@@ -1,215 +1,220 @@
-<!doctype html>
-<html lang="ur">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#123b5d">
-<title>Ilm Dost Learning Store</title>
+<meta name="description" content="Smart Dost Store - Shop smart and save more.">
+<title>Smart Dost Store | Online Shopping</title>
+
 <style>
-:root{--navy:#123b5d;--blue:#176b87;--gold:#f3bd4f;--paper:#f5f8fb;--ink:#182633}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Nastaliq Urdu",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-header{background:linear-gradient(130deg,var(--navy),var(--blue));color:#fff;padding:26px 16px 34px;text-align:center}
-.brand{font-size:28px;font-weight:800;margin:0}.tag{margin:6px 0 0;color:#e8f4fb}
-nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;background:#0d2e48;padding:10px}
-nav a{color:white;text-decoration:none;font-size:14px}
-main{max-width:900px;margin:auto;padding:18px 14px}
-.hero,.panel,.product{background:white;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 5px 18px #18344d0d}
-.hero h2{margin-top:0;color:var(--navy)}.pill{display:inline-block;background:#fff0c9;color:#664800;padding:4px 10px;border-radius:999px;font-size:13px}
-h2,h3{color:var(--navy)}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.product h3{margin:6px 0}.price{font-weight:bold;color:#12613a;font-size:20px}.muted{color:#5b6974;font-size:14px}
-button,.button{border:0;border-radius:10px;background:var(--navy);color:white;padding:12px 15px;font-size:15px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
-button:hover,.button:hover{background:var(--blue)}label{display:block;font-weight:bold;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #c8d4df;border-radius:9px;font-size:16px;background:#fff}
-.notice{background:#fff8e7;border-right:4px solid var(--gold);padding:12px;border-radius:8px}
-footer{text-align:center;background:#e8eff5;padding:22px 12px;font-size:13px}
-small{display:block;color:#5b6974;margin-top:8px}
-@media(max-width:480px){.brand{font-size:24px}main{padding:12px}.hero,.panel,.product{padding:15px}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fa;color:#183047}
+header{background:#123b5d;color:white;padding:18px 12px;text-align:center}
+header h1{margin:0;font-size:27px}
+header p{margin:7px 0 0}
+nav{background:#176b87;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 10px;font-weight:bold}
+.hero{padding:35px 18px;text-align:center;background:#e3eef5}
+.hero h2{font-size:32px;color:#123b5d;margin:0 0 12px}
+.hero p{line-height:1.6}
+.btn{display:inline-block;background:#f3bd4a;color:#183047;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+section{max-width:1000px;margin:28px auto;padding:0 14px}
+h2.section-title{color:#123b5d}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:white;border-radius:12px;padding:18px;text-align:center;box-shadow:0 2px 9px #00000010}
+.product-icon{font-size:55px;background:#eaf2f7;border-radius:10px;padding:18px}
+.card h3{margin-bottom:8px}
+.card p{color:#5d6b77;line-height:1.5}
+.price{font-weight:bold;color:#176b87}
+.order-btn{display:block;background:#123b5d;color:white;padding:11px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:12px}
+.info{background:white;border-radius:12px;padding:18px;line-height:1.8}
+form{background:white;padding:20px;border-radius:12px}
+label{display:block;font-weight:bold;margin:13px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5df;border-radius:7px;font-size:16px}
+textarea{min-height:85px}
+button.submit{width:100%;margin-top:18px;background:#176b87;color:white;border:0;padding:14px;border-radius:8px;font-size:16px;font-weight:bold}
+.small{font-size:13px;color:#667785;line-height:1.5}
+footer{margin-top:35px;background:#123b5d;color:white;text-align:center;padding:24px 14px}
+footer p{font-size:13px;line-height:1.6}
 </style>
 </head>
+
 <body>
 <header>
-  <p class="pill">تعلیم • مشق • کامیابی</p>
-  <h1 class="brand">Ilm Dost Learning Store</h1>
-  <p class="tag">طلبہ کے لیے آسان اور مفید تعلیمی ورک شیٹس</p>
+  <h1>Smart Dost Store</h1>
+  <p>Your Shopping Friend — Shop Smart, Save More!</p>
 </header>
-<nav><a href="#home">ہوم</a><a href="#worksheets">ورک شیٹس</a><a href="#order">آرڈر کریں</a><a href="#payment">ادائیگی</a><a href="#contact">رابطہ</a></nav>
-<main>
-<section id="home" class="hero">
-  <h2>خوش آمدید!</h2>
-  <p>اپنی کلاس اور مضمون کے مطابق پریکٹس ورک شیٹس حاصل کریں۔ ہر پروڈکٹ کی تفصیل اور قیمت دیکھ کر آرڈر بھیجیں۔</p>
-  <p class="notice"><strong>اہم:</strong> فی الحال آرڈر دستی طریقے سے مکمل ہوں گے۔ ادائیگی اپنے JazzCash اکاؤنٹ میں خود چیک کرنے کے بعد ہی PDF بھیجی جائے گی۔</p>
-</section>
-<section id="worksheets">
-  <h2>دستیاب ورک شیٹس</h2>
-  <div class="products">
-    <article class="product">
-      <p class="pill">جلد دستیاب</p>
-      <h3>Class 5 Science</h3>
-      <p>باب، MCQs اور Answer Key کی تفصیل یہاں شامل کریں۔</p>
-      <p class="price">قیمت: Rs. 100</p>
-      <button onclick="chooseProduct('Class 5 Science','100')">آرڈر کریں</button>
-    </article>
-    <article class="product">
-      <p class="pill">جلد دستیاب</p>
-      <h3>Class 6 English</h3>
-      <p>گرامر، الفاظ اور پریکٹس سوالات کی تفصیل یہاں شامل کریں۔</p>
-      <p class="price">قیمت: Rs. 100</p>
-      <button onclick="chooseProduct('Class 6 English','100')">آرڈر کریں</button>
-    </article>
-    <article class="product">
-      <p class="pill">جلد دستیاب</p>
-      <h3>Class 7 General Knowledge</h3>
-      <p>عمومی معلومات اور مشق کے سوالات کی تفصیل یہاں شامل کریں۔</p>
-      <p class="price">قیمت: Rs. 100</p>
-      <button onclick="chooseProduct('Class 7 General Knowledge','100')">آرڈر کریں</button>
-    </article>
-  </div>
-  <small>یہ ابتدائی نمونہ کی فہرست ہے۔ جب تک اصل PDF تیار نہ ہو، ان پروڈکٹس کو فروخت کے لیے دستیاب نہ ظاہر کریں۔</small>
-</section>
-<section id="payment" class="panel">
-  <h2>JazzCash ادائیگی</h2>
-  <ol>
-    <li>آرڈر بھیجنے کے بعد دکاندار سے ادائیگی کی تفصیل حاصل کریں۔</li>
-    <li>صرف تصدیق شدہ JazzCash اکاؤنٹ/کاروباری نمبر پر رقم بھیجیں۔</li>
-    <li>آرڈر نمبر اور ادائیگی کی اطلاع بھیجیں۔</li>
-    <li>فروخت کنندہ اپنے اکاؤنٹ میں رقم موصول ہونے کی تصدیق کرے گا۔</li>
-    <li>تصدیق کے بعد PDF WhatsApp یا ای میل سے بھیجی جائے گی۔</li>
-  </ol>
-  <p class="notice">اس ویب سائٹ میں JazzCash کا خودکار payment gateway موجود نہیں ہے۔ اسکرین شاٹ یا رسید کو اکیلے ادائیگی کا ثبوت نہ سمجھیں۔</p>
-</section>
-<section id="order" class="panel">
-  <h2>آرڈر فارم</h2>
-  
-<div class="payment-info">
-  <h3>JazzCash se payment</h3>
-  <p>JazzCash Number: <strong>03232154855</strong></p>
-  <p>1. Apni worksheet select karke order bhejein.</p>
-  <p>2. Upar diye gaye number par payment karein.</p>
-  <p>3. Payment ke baad Transaction ID bhejein.</p>
-  <p>4. Payment confirm hone ke baad PDF bheji jayegi.</p>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#order">Place an Order</a>
+</nav>
+
+<div class="hero" id="home">
+  <h2>Welcome to Smart Dost Store!</h2>
+  <p>Discover useful products for everyday life at friendly prices.</p>
+  <a class="btn" href="#products">Explore Products</a>
 </div>
 
-<form id="orderForm"
-action="https://formspree.io/f/xaeqrpkq"
-method="POST">
-    <label for="customer">آپ کا نام</label><input id="customer" name="customer_name" type="text" required placeholder="اپنا نام لکھیں">
-    <label for="product">ورک شیٹ</label>
-    <select id="product" name="worksheet" required>
-      <option value="Class 5 Science|100">Class 5 Science — Rs. 100</option>
-      <option value="Class 6 English|100">Class 6 English — Rs. 100</option>
-      <option value="Class 7 General Knowledge|100">Class 7 General Knowledge — Rs. 100</option>
-    </select>
-    <label for="contact">WhatsApp نمبر یا ای میل</label>
-<input id="contact" name="customer_contact" required placeholder="رابطے کی تفصیل">
-    <label for="notes">اضافی نوٹ (اختیاری)</label>
-<textarea id="notes" name="notes" rows="3" placeholder="مثلاً کلاس/باب"></textarea>
-<label for="transaction">JazzCash Transaction ID</label>
-<input
-  id="transaction"
-  name="transaction_id"
-  type="text"
-  placeholder="ادائیگی کی Transaction ID لکھیں"
-  required
->
-    <button type="submit">آرڈر بھیجیں</button>
-    <small>یہ فارم آپ کے فون پر آرڈر کا پیغام تیار کرتا ہے؛ خود بخود کسی کو نہیں بھیجتا۔</small>
-  </form>
-  <div id="result" hidden class="notice" style="margin-top:14px">
-    <p>آرڈر کا پیغام تیار ہے۔ اسے کاپی کرکے دکاندار کو بھیجیں:</p><textarea id="orderText" rows="8" readonly></textarea><button type="button" onclick="copyOrder()">پیغام کاپی کریں</button>
+<section>
+  <div class="info">
+    <strong>Why Shop With Us?</strong><br>
+    ✓ Easy WhatsApp ordering<br>
+    ✓ Multiple product categories<br>
+    ✓ Cash on Delivery where available<br>
+    ✓ JazzCash and Easypaisa manual payments
   </div>
 </section>
-<section id="contact" class="panel">
-  <h2>رابطہ</h2>
-  <p>WhatsApp: اپنا رابطہ نمبر یہاں شامل کریں</p>
-  <p>ادائیگی کی تفصیل صرف براہ راست تصدیق کے بعد شیئر کریں۔</p>
+
+<section id="products">
+  <h2 class="section-title">Our Products</h2>
+  <p class="small">These are sample categories. Add real product details and confirmed prices before accepting orders.</p>
+
+  <div class="products">
+    <div class="card">
+      <div class="product-icon">🎧</div>
+      <h3>Mobile Accessories</h3>
+      <p>Useful accessories for everyday mobile use.</p>
+      <p class="price">Price: To Be Confirmed</p>
+      <a class="order-btn" href="#order" onclick="chooseProduct('Mobile Accessories')">Order Now</a>
+    </div>
+
+    <div class="card">
+      <div class="product-icon">🏠</div>
+      <h3>Home Essentials</h3>
+      <p>Practical items for your home and daily needs.</p>
+      <p class="price">Price: To Be Confirmed</p>
+      <a class="order-btn" href="#order" onclick="chooseProduct('Home Essentials')">Order Now</a>
+    </div>
+
+    <div class="card">
+      <div class="product-icon">🎒</div>
+      <h3>Bags & Accessories</h3>
+      <p>Everyday bags and useful accessories.</p>
+      <p class="price">Price: To Be Confirmed</p>
+      <a class="order-btn" href="#order" onclick="chooseProduct('Bags & Accessories')">Order Now</a>
+    </div>
+
+    <div class="card">
+      <div class="product-icon">👕</div>
+      <h3>Clothing</h3>
+      <p>Clothing products for everyday use.</p>
+      <p class="price">Price: To Be Confirmed</p>
+      <a class="order-btn" href="#order" onclick="chooseProduct('Clothing')">Order Now</a>
+    </div>
+
+    <div class="card">
+      <div class="product-icon">📚</div>
+      <h3>Books & Stationery</h3>
+      <p>Study supplies, notebooks, and stationery.</p>
+      <p class="price">Price: To Be Confirmed</p>
+      <a class="order-btn" href="#order" onclick="chooseProduct('Books & Stationery')">Order Now</a>
+    </div>
+
+    <div class="card">
+      <div class="product-icon">🛍️</div>
+      <h3>Other Products</h3>
+      <p>Contact us to ask about other available items.</p>
+      <p class="price">Price: To Be Confirmed</p>
+      <a class="order-btn" href="#order" onclick="chooseProduct('Other Products')">Order Now</a>
+    </div>
+  </div>
 </section>
-</main>
-<footer>© Ilm Dost Learning Store • تعلیمی مواد کے لیے</footer>
+
+<section id="order">
+  <h2 class="section-title">Place Your Order</h2>
+  <p>Complete the form, then send your order through WhatsApp.</p>
+
+  <form id="orderForm">
+    <label for="customer">Full Name</label>
+    <input id="customer" required placeholder="Enter your full name">
+
+    <label for="phone">Phone Number</label>
+    <input id="phone" required type="tel" placeholder="03XX XXXXXXX">
+
+    <label for="product">Select Product</label>
+    <select id="product" required>
+      <option value="">Choose a product</option>
+      <option>Mobile Accessories</option>
+      <option>Home Essentials</option>
+      <option>Bags & Accessories</option>
+      <option>Clothing</option>
+      <option>Books & Stationery</option>
+      <option>Other Products</option>
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input id="quantity" type="number" min="1" value="1" required>
+
+    <label for="payment">Payment Method</label>
+    <select id="payment" required>
+      <option value="">Choose payment method</option>
+      <option>Cash on Delivery (if available)</option>
+      <option>JazzCash (manual payment confirmation)</option>
+      <option>Easypaisa (manual payment confirmation)</option>
+    </select>
+
+    <label for="address">Complete Delivery Address</label>
+    <textarea id="address" required placeholder="House, street, area, city"></textarea>
+
+    <button class="submit" type="submit">Send Order on WhatsApp</button>
+    <p class="small">Your WhatsApp app will open with your order details. You must press Send in WhatsApp to submit the order.</p>
+  </form>
+</section>
+
+<section>
+  <div class="info">
+    <h2 class="section-title">Payment & Delivery</h2>
+    <p>Payment and delivery options depend on supplier and courier availability. Confirm the final price, delivery charges, stock, and return policy before accepting an order.</p>
+    <p><strong>Safety:</strong> Never share your JazzCash/Easypaisa PIN or OTP with anyone.</p>
+  </div>
+</section>
+
+<footer>
+  <h3>Smart Dost Store</h3>
+  <p>Shop Smart. Save More.</p>
+  <p>© <span id="year"></span> Smart Dost Store. All rights reserved.</p>
+</footer>
 
 <script>
-function chooseProduct(name, price) {
-  const sel = document.getElementById('product');
+/* IMPORTANT:
+   Replace the number below with your own WhatsApp number.
+   Pakistan example format: 923001234567
+   Use country code 92 and remove the first 0.
+*/
+const STORE_WHATSAPP_NUMBER = "923001234567";
 
-  for (const option of sel.options) {
-    if (option.value.startsWith(name + '|')) {
-      sel.value = option.value;
-      break;
-    }
-  }
-
-  document.getElementById('order').scrollIntoView({
-    behavior: 'smooth'
-  });
+function chooseProduct(name){
+  document.getElementById("product").value = name;
 }
 
-const orderForm = document.getElementById('orderForm');
+document.getElementById("year").textContent = new Date().getFullYear();
 
-orderForm.addEventListener('submit', async function(event) {
+document.getElementById("orderForm").addEventListener("submit",function(event){
   event.preventDefault();
 
-  const customer = document.getElementById('customer').value.trim();
-  const productValue = document.getElementById('product').value;
-  const productParts = productValue.split('|');
-  const product = productParts[0];
-  const price = productParts[1] || '0';
-  const contact = document.getElementById('contact').value.trim();
-  const notes = document.getElementById('notes').value.trim();
-  const transaction = document.getElementById('transaction').value.trim();
+  if(STORE_WHATSAPP_NUMBER === "923001234567"){
+    alert("Please add the store owner's correct WhatsApp number in the website code first.");
+    return;
+  }
 
   const message =
-    'Ilm Dost Learning Store - Order\n\n' +
-    'Customer Name: ' + customer + '\n' +
-    'Worksheet: ' + product + '\n' +
-    'Price: Rs. ' + price + '\n' +
-    'Contact: ' + contact + '\n' +
-    'JazzCash Transaction ID: ' + transaction + '\n' +
-    'Notes: ' + (notes || 'None') + '\n\n' +
-    'Payment will be verified before the PDF is provided.';
+    "New Order - Smart Dost Store\n" +
+    "Name: " + document.getElementById("customer").value.trim() + "\n" +
+    "Phone: " + document.getElementById("phone").value.trim() + "\n" +
+    "Product: " + document.getElementById("product").value + "\n" +
+    "Quantity: " + document.getElementById("quantity").value + "\n" +
+    "Payment: " + document.getElementById("payment").value + "\n" +
+    "Address: " + document.getElementById("address").value.trim();
 
-  const result = document.getElementById('result');
-  const orderText = document.getElementById('orderText');
+  const url = "https://wa.me/" + STORE_WHATSAPP_NUMBER +
+              "?text=" + encodeURIComponent(message);
 
-  orderText.value = message;
-  result.hidden = false;
-
-  const button = orderForm.querySelector('button[type="submit"]');
-  button.disabled = true;
-  button.textContent = 'آرڈر بھیجا جا رہا ہے...';
-
-  try {
-    const response = await fetch(orderForm.action, {
-      method: 'POST',
-      body: new FormData(orderForm),
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      alert('آرڈر کی تفصیل موصول ہو گئی ہے۔ اب پیغام کاپی کر سکتے ہیں۔');
-    } else {
-      alert('آرڈر خودکار طور پر نہیں بھیجا گیا۔ پیغام کاپی کرکے محفوظ رکھیں۔');
-    }
-  } catch (error) {
-    alert('انٹرنیٹ یا بھیجنے میں مسئلہ ہے۔ پیغام کاپی کرکے محفوظ رکھیں۔');
-  } finally {
-    button.disabled = false;
-    button.textContent = 'آرڈر بھیجیں';
-  }
+  window.location.href = url;
 });
-
-async function copyOrder() {
-  const orderText = document.getElementById('orderText');
-
-  try {
-    await navigator.clipboard.writeText(orderText.value);
-    alert('آرڈر کا پیغام کاپی ہو گیا ہے۔');
-  } catch (error) {
-    orderText.focus();
-    orderText.select();
-    alert('پیغام منتخب ہے۔ Copy دبائیں۔');
-  }
-}
 </script>
-
 </body>
 </html>
